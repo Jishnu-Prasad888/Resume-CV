@@ -1,0 +1,294 @@
+%-------------------------
+% Resume in Latex
+% Based on Jake Gutierrez template
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{5pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Hyperlink setup: clickable in PDF, underlined so visible in print
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue
+}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+    \item
+    \ifx&#2&
+      {\small #1\par}
+    \else
+      \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1 & #2 \\
+      \end{tabular*}
+    \fi
+    \ifx&#3&\else
+      \vspace{-4pt}
+      {\small \printlink{#3}\par}
+    \fi
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Visible + clickable link macro
+\newcommand{\printlink}[1]{\href{#1}{\underline{\texttt{\small #1}}}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jishnu Prasad} \\ \vspace{1pt}
+    \small +91 98447 78936 $|$
+    \href{mailto:thisisjishnuprasad888@gmail.com}{\underline{thisisjishnuprasad888@gmail.com}} $|$
+    \href{https://linkedin.com/in/jishnu-prasad-ba90a9328}{\underline{linkedin.com/in/jishnu-prasad-ba90a9328}} $|$
+    \href{https://github.com/Jishnu-Prasad888}{\underline{github.com/Jishnu-Prasad888}} $|$
+    \href{https://jishnu-prasad.vercel.app}{\underline{jishnu-prasad.vercel.app}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology Karnataka}{Surathkal, India}
+      {B.Tech in Electrical and Electronics Engineering \quad CGPA: \textbf{7.18\,/\,10}}{Sep. 2024 -- Present}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+  {SPIRE (Signal Processing, Interpretation and REpresentation) Lab}{IISC}
+  {Research Intern $|$ \emph{RAG, Python, React, Agentic AI}}{May 2026 -- Present}
+\resumeItemListStart
+
+\resumeItem{Built a multilingual (English & Kannada) multimodal RAG system for SBI banking forms and documentation, integrating OCR, automated web scraping, document ingestion, embedding generation, and Elasticsearch-based indexing to enable hybrid vector and keyword search with metadata filtering for accurate and contextually relevant retrieval across digital and scanned documents.}
+
+\resumeItem{Architected a multi-agent retrieval framework with specialized agents for PDF, Markdown, Excel, and HTML documents, dynamically routing queries to the most relevant knowledge source for improved retrieval accuracy and contextual grounding.}
+
+\resumeItem{Designed and implemented a Knowledge-Augmented Generation (KAG) architecture to overcome limitations of traditional RAG on complex banking queries, enhancing multi-hop reasoning, contextual understanding, and answer completeness.}
+
+\resumeItem{Fine-tuned a Qwen3-8B-Instruct model on a custom evaluation dataset to act as an answer-quality critic, scoring responses on Accuracy, Answer Relevancy, and Faithfulness and enabling a DeepThink feedback loop that triggered iterative retrieval-generation cycles; benchmarked RAG, Multi-Agent RAG, GPT-4o, and KAG using an LLM-as-a-Judge evaluation framework.}
+
+\resumeItemListEnd
+
+
+\resumeSubheading
+  {HALE (Healthcare Analytics and Language Engineering) Lab}{NITK}
+  {Research Intern $|$ \emph{Kubernetes, Redis, LangChain, RAG, Ansible}}{Jan 2026 -- Present}
+  \resumeItemListStart
+    \resumeItem{Engineered a multi-node Raspberry Pi k3s cluster with MetalLB and NGINX Ingress, enabling load-balanced, TLS-secured service delivery.}
+    \resumeItem{Built a full observability stack using Prometheus, Grafana, Loki, and Promtail for centralized monitoring and log aggregation.}
+    \resumeItem{Deployed distributed MinIO storage, Flask/React applications, and JupyterHub, addressing multi-node storage, image distribution, and service discovery challenges.}
+    \resumeItem{Automated provisioning and orchestration with Ansible to support reproducible edge inference workloads on a Raspberry Pi 5 Kubernetes cluster.}
+  \resumeItemListEnd
+
+    \resumeSubheading
+      {Urban Records}{Remote}
+      {Freelance Full-Stack Engineer $|$ \emph{Django REST Framework, React, TailwindCSS, Docker, PostgreSQL}}{Sep.~2025 -- Nov.~2025}
+\resumeItemListStart
+\resumeItem{Architected and developed a containerized full-stack document management platform for tax, passport, and visa processing workflows using Django REST Framework, React, PostgreSQL, and Docker.}
+\resumeItem{Optimized document processing pipelines to reduce manual intervention from days to just hours}
+\resumeItem{Deployed a production-grade system supporting 500+ active users with high reliability.}
+
+
+\resumeItemListEnd
+
+    \resumeSubheading
+      {SENA NGO}{Surathkal, India}
+      {Backend Engineering Intern $|$ \emph{Python, Django, SQL, Docker}}{May~2025 -- Jul.~2025}
+      \resumeItemListStart
+\resumeItem{Developed and integrated a secure donations pipeline using the Cashfree Python SDK, enabling reliable online payment processing and transaction tracking.}
+
+\resumeItem{Built form-driven publishing workflows allowing non-technical contributors to create and publish content without developer intervention, reducing operational dependency on the engineering team .}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Memora --- Redis-like In-Memory Database} $|$ \emph{Go, Python, TCP, Concurrent Systems}}
+{}
+{https://github.com/Jishnu-Prasad888/Memora}
+
+\resumeItemListStart
+\resumeItem{Engineered a Redis-compatible in-memory key-value database in Go with full RESP protocol support and concurrent TCP client handling.}
+\resumeItem{Implemented custom hash-table storage, TTL expiration, background cleanup, and RDB-style snapshot persistence for durable in-memory data management.}
+\resumeItem{Built CLI and Python GUI clients for database administration, monitoring, and interactive command execution.}
+\resumeItem{Achieved \textbf{226K+ operations/sec} with \textbf{1M benchmarked operations}, \textbf{39µs P50 latency}, and \textbf{2.0ms P99 latency} under concurrent workloads.}
+\resumeItem{Designed goroutine-based request processing and non-blocking I/O architecture to support scalable multi-client access.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{ATLAS & Beacon --- Distributed Fleet Management and Observability Platform} $|$ \emph{ReactJS, Django, NATS JetStream, RAG, GraphQL, Aurora PostgreSQL, Redis, Docker, Cloudflare, Vercel}}
+{}
+{https://github.com/Jishnu-Prasad888/ATLAS}
+
+\resumeItemListStart
+
+\resumeItem{Engineered and deployed distributed control-plane architecture comprising centralized \textbf{ATLAS} services and lightweight \textbf{Beacon} agents, enabling \textbf{scalable fleet orchestration} and \textbf{remote operations}.}
+
+\resumeItem{Built a high-throughput observability pipeline collecting \textbf{CPU, memory, disk, network, process, Docker, and Kubernetes telemetry}, storing historical metrics in \textbf{Aurora PostgreSQL} and \textbf{Redis}, with real-time aggregation, log indexing, and \textbf{WebSocket-based streaming dashboards}.}
+
+\resumeItem{Implemented fault-tolerant agent communication over \textbf{NATS JetStream} using \textbf{durable consumers}, \textbf{message replay}, \textbf{offline buffering}, \textbf{dead-letter queues} and \textbf{mTLS}-based authentication for reliable distributed messaging.}
+
+\resumeItem{Developed a multi-tenant operations platform featuring \textbf{RBAC}, \textbf{immutable audit logging}, \textbf{fleet-wide diagnostics}, \textbf{process and container lifecycle management}, \textbf{AI-assisted log/telemetry analysis}, and containerized deployment via \textbf{Docker}, \textbf{Cloudflare Tunnel}, \textbf{Nginx}, and \textbf{Vercel}.}
+
+\resumeItemListEnd
+
+
+
+
+
+      \resumeProjectHeading
+          {\textbf{RescueMind} $|$ \emph{FastAPI, Go, gRPC, RAG, Redis, WebSockets}}
+          {IET NITK Project Expo 2026}
+          {https://github.com/Jishnu-Prasad888/RescueMind}
+          \resumeItemListStart
+          \resumeItem{Built an AI-powered disaster intelligence platform for real-time satellite and aerial imagery analysis using CNN-generated grid heatmaps across 5 disaster categories.}
+
+\resumeItem{Engineered a distributed backend using FastAPI, Go, gRPC, Redis, and WebSockets to process live RSS feeds and AIS ship-tracking streams with end-to-end response latencies of \textbf{\raise.17ex\hbox{$\scriptstyle\sim$}50--200\,ms}.}
+
+\resumeItem{Designed low-latency event-driven system architecture supporting concurrent multimodal data ingestion, inference, and real-time dashboard updates.}
+            \resumeItem{Built an autonomous rover prototype using YOLO-based vision and sensor fusion with a hardware safety override.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{PacketLens} $|$ \emph{C++, Qt6, Python, Linux Networking, MCP (Model Context Protocol)}}
+          {}
+          {https://github.com/Jishnu-Prasad888/PacketLens}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{real-time network monitoring tool} with packet capture, flow aggregation, and process-level attribution on Linux.}
+            \resumeItem{Designed a dual-interface system with flow tables and interactive graphs for network visualization.}
+            \resumeItem{Highlighted high-bandwidth processes using node scaling and protocol-based color coding.}
+            \resumeItem{Mapped live network connections to originating processes for system-level visibility into traffic behavior.}
+            \resumeItem{Exposed a lightweight HTTP API and MCP integration for natural-language querying of network activity.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Browser-RAG --- Local Browser History Retrieval-Augmented Generation} $|$ \emph{Python, FastAPI, React, TypeScript, ChromaDB, Ollama, LLaMA 3.2}}
+          {}
+          {https://github.com/Jishnu-Prasad888/Browser-RAG}
+          \resumeItemListStart
+            \resumeItem{Built a local-first RAG system that extracts and processes browser history from Chrome, Firefox, and Edge across Windows and Linux.}
+            \resumeItem{Designed a content pipeline to download, chunk, and embed visited web pages into ChromaDB for efficient semantic retrieval.}
+            \resumeItem{Implemented a FastAPI backend with Ollama-powered LLaMA 3.2 for context-aware question answering over personal browsing data.}
+            \resumeItem{Developed a React + TypeScript chat interface with conversation history, markdown rendering, and responsive UI.}
+            \resumeItem{Integrated smart filtering, deduplication, and domain blocking to optimize storage and retrieval quality.}
+          \resumeItemListEnd
+
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C++, Go, JavaScript/TypeScript \quad \textit{Familiar:} Java, Bash, GraphQL, MATLAB, R} \\
+     \textbf{Frameworks}{: FastAPI, Django, React, Next.js} \\
+     \textbf{ML \& CV}{: Langchain, MCP(Model Context Protocol), ADK (Agent Developemnt Kit), PyTorch, TensorFlow, OpenCV} \\
+     \textbf{Tools}{: Linux, Docker, Kubernetes, PostgreSQL, Redis, Git}
+    }}
+ \end{itemize}
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Top 10 --- Caterpillar Autonomy Challenge}{IIT Madras}
+      {Team Member, NITK CATERBOTS}{}
+      \resumeItemListStart
+        \resumeItem{Designed and built an autonomous Mars-terrain rover capable of crater detection, sand berm construction, and NLOS navigation out of 1,922 competing teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {IET NITK Student Chapter}{NITK Surathkal}
+      {Project Lead --- RescueMind \& Web Team member}{}
+      \resumeItemListStart
+        \resumeItem{Led a team building RescueMind, a disaster response system with routing, CNN-based classification, and RAG-based advisories.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amateur Astronomy Club (AAC) \& SMILE Club}{NITK Surathkal}
+      {Chief Technical Coordinator in AAC and Events \& Publicity Coordinator in SMILE}{}
+      \resumeItemListStart
+        \resumeItem{Co-led Arduino-based astronomy projects including stellar mass estimation and ML-based multi-camera video stitching.}
+        \resumeItem{Organized technical events, secured sponsorships, and managed sub-teams for structured event delivery.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

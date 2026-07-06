@@ -1,0 +1,234 @@
+\documentclass[10.5pt]{article}
+\usepackage[margin=0.7in, top=0.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{ulem}
+\usepackage{xcolor} % make sure this is in your preamble
+
+% Colors
+\definecolor{accent}{HTML}{1A56DB}
+\definecolor{dark}{HTML}{1E293B}
+\definecolor{mid}{HTML}{475569}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries\color{accent}}{}{0em}{}[{\color{accent}\titlerule[1.2pt]}]
+\titlespacing*{\section}{0pt}{0.7em}{0.35em}
+
+% List settings
+\setlist[itemize]{leftmargin=1.2em, noitemsep, topsep=0.15em, itemsep=0.1em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Hyperlink setup
+\hypersetup{
+  colorlinks=false,
+  urlbordercolor=accent,
+  linkbordercolor=accent,
+  pdfborderstyle={/S/U/W 1},
+  pdfnewwindow=true
+}
+
+% Helper: underlined href that opens in a new tab/window
+\newcommand{\ulink}[2]{\href{#1}{\uline{#2}}}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small\color{dark} #1}
+
+\newcommand{\entryHeader}[2]{%
+  \noindent\textbf{\color{dark}#1}\hfill{\small\itshape\color{mid}#2}%
+}
+
+\newcommand{\entryMeta}[1]{%
+  \par\vspace{1pt}{\small\itshape\color{mid}#1}\par\vspace{3pt}%
+}
+
+\newcommand{\projectHeader}[3]{%
+  % #1 = name, #2 = tech, #3 = url (empty if none)
+  \noindent\textbf{\color{dark}#1}%
+  \par\vspace{1pt}{\small\itshape\color{mid}#2}%
+  \ifx&#3&\else\par\vspace{2pt}{\small\ulink{#3}{\textcolor{accent}{\ttfamily #3}}}\fi%
+  \par\vspace{3pt}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+% ── HEADER ───────────────────────────────────────────────────────────────────
+{\LARGE\bfseries\color{dark} JISHNU PRASAD}
+
+\vspace{4pt}
+{\small\color{mid}
+  \faPhone\ +91 98447 78936 \quad\textcolor{mid}{·}\quad
+  \faEnvelope\ \ulink{mailto:thisisjishnuprasad888@gmail.com}{\textcolor{mid}{thisisjishnuprasad888@gmail.com}} \quad\textcolor{mid}{·}\quad
+  \faLinkedin\ \ulink{https://linkedin.com/in/jishnu-prasad-ba90a9328}{\textcolor{mid}{jishnu-prasad-ba90a9328}} \quad\textcolor{mid}{·}\quad
+  \faGlobe\ \ulink{https://jishnu-prasad.vercel.app}{\textcolor{mid}{jishnu-prasad.vercel.app}}
+}
+
+% ── EDUCATION ────────────────────────────────────────────────────────────────
+\section*{Education}
+
+\entryHeader{National Institute of Technology Karnataka (NITK Surathkal)}{Sep 2024 -- Present}
+\entryMeta{B.Tech in Electrical and Electronics Engineering \quad·\quad Current CGPA: \textbf{7.27\,/\,10}}
+
+% ── EXPERIENCE ───────────────────────────────────────────────────────────────
+\section*{Experience}
+
+\entryHeader{HALE (Healthcare Analytics and Language Engineering) --- Research Intern}{Jan 2026 -- Present}
+\entryMeta{NITK Surathkal · Python, TensorFlow, PyTorch, Computer Vision, Vision Transformers, RAG, LangChain}
+\begin{itemize}
+  \resumeItem{Designing a multimodal pipeline to ingest, preprocess, and analyze satellite and drone imagery for disaster zone assessment.}
+  \resumeItem{Implementing a fusion framework using Small Language Models (SLMs) and RAG to semantically align visual data with textual disaster reports.}
+  \resumeItem{Developing a real-time visualization prototype for natural-language querying of fused disaster intelligence.}
+  \resumeItem{Building a Raspberry Pi 5 cluster for on-device (edge) inference of ML models.}
+\end{itemize}
+
+\vspace{0.4em}
+\entryHeader{Urban Records --- Freelance Full-Stack Engineer}{Sep 2025 -- Nov 2025}
+\entryMeta{Remote · Django REST Framework, Docker, React, Tailwind CSS}
+\begin{itemize}
+  \resumeItem{Built and delivered a full-stack government documentation platform from scratch.}
+  \resumeItem{Optimized tax, passport, visa, and document-processing workflows for improved usability and data flow.}
+  \resumeItem{Deployed and maintained a stable production system scaling to 500+ active users.}
+\end{itemize}
+
+\vspace{0.4em}
+\entryHeader{SENA NGO --- Backend Engineering Intern}{May 2025 -- Jul 2025}
+\entryMeta{Surathkal, India · Python, Django, SQL, Docker}
+\begin{itemize}
+  \resumeItem{Built the donations module and integrated the Cashfree Python SDK to enable streamlined online contributions.}
+  \resumeItem{Enhanced the user-management dashboard with improved filters and clearer access workflows.}
+  \resumeItem{Created form-based publishing tools for content writers, reducing engineering overhead.}
+\end{itemize}
+
+% ── PROJECTS ─────────────────────────────────────────────────────────────────
+\section*{Projects}
+
+\projectHeader{Caterpillar Autonomy Challenge --- NITK CATERBOTS}{ROS2, LiDAR, YOLOv8, SLAM, Computer Vision, Raspberry Pi 5}{}
+\begin{itemize}
+  \resumeItem{Ranked \textbf{Top 10 out of 1,922 teams}, advancing to Non-Line-of-Sight (NLOS) autonomous navigation finals at IIT Madras.}
+  \resumeItem{Implemented LiDAR-based obstacle detection and SLAM-driven occupancy grid mapping by fusing LiDAR and odometry data.}
+  \resumeItem{Fine-tuned YOLOv8n for crater detection achieving \textasciitilde92\% mAP, enabling dynamic hazard avoidance in unstructured terrain.}
+  \resumeItem{Engineered a fully autonomous NLOS navigation stack optimized for resource-constrained Raspberry Pi 5 hardware.}
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\textbf{\color{dark}SATORI --- Observability Platform}\ {\small\textcolor{accent}{\itshape(Under Active Development)}}
+\par\vspace{1pt}{\small\itshape\color{mid}Django, React, LangChain, Kafka, TimescaleDB, PostgreSQL, Docker, Kubernetes}\par\vspace{3pt}
+\begin{itemize}
+  \resumeItem{Designing a horizontally scalable observability platform with distributed node agents and fault-tolerant telemetry pipelines.}
+  \resumeItem{Building secure Django APIs with async message brokering and a multi-database backend for metrics, logs, and embeddings.}
+  \resumeItem{Developing AI-driven analysis (RAG querying, anomaly detection, human-in-the-loop remediation) with LangChain and Ollama.}
+\end{itemize}
+
+\vspace{0.3em}
+\projectHeader{Memora --- Redis-like In-Memory Database}{Go, Python, CustomTkinter, TCP Networking, Concurrent Systems}{https://github.com/Jishnu-Prasad888/Memora}
+\begin{itemize}
+  \resumeItem{Designed a Redis-compatible in-memory key-value store in Go with full RESP protocol support.}
+  \resumeItem{Built a high-performance storage engine using a custom hash table and goroutine-based concurrency for non-blocking I/O.}
+  \resumeItem{Implemented TTL-based expiry, background cleanup, RDB-style snapshot persistence, and both CLI and Python GUI clients.}
+\end{itemize}
+
+\vspace{0.3em}
+\projectHeader{Browser History RAG Agent}{Python, FastAPI, React, TypeScript, ChromaDB, Ollama, LLaMA 3.2}{https://github.com/Jishnu-Prasad888/Browser-RAG}
+\begin{itemize}
+  \resumeItem{Built a local-first RAG system to query previously visited web pages via a conversational chat interface.}
+  \resumeItem{Integrated locally hosted LLaMA 3.2 via Ollama for privacy-focused question answering without cloud APIs.}
+  \resumeItem{Designed a React + TypeScript frontend with persistent conversation history and REST API integration.}
+\end{itemize}
+
+\vspace{0.3em}
+\projectHeader{Ingenium --- AI Knowledge Management App}{React Native, TypeScript, Appwrite, Gemini API, RAG}{https://github.com/Jishnu-Prasad888/Ingenium}
+\begin{itemize}
+  \resumeItem{Cross-platform note-taking app with hierarchical folders, custom Markdown renderer, and structured navigation.}
+  \resumeItem{Integrated Gemini API for RAG over user notes with encrypted storage of user-provided API keys.}
+  \resumeItem{Built an interactive whiteboard (pen, pencil, eraser, import/export) and a built-in stopwatch.}
+\end{itemize}
+
+\vspace{0.3em}
+\projectHeader{TTYL --- Terminal Encrypted Chat}{Python, Socket Programming, Networking, Encryption}{https://github.com/Jishnu-Prasad888/ttyl}
+\begin{itemize}
+  \resumeItem{Real-time terminal chat with global messaging, private messaging, and role-based rooms with admin moderation.}
+  \resumeItem{Encrypted client--server communication; MAC-address-based banning to prevent most ban overrides.}
+\end{itemize}
+
+\vspace{0.3em}
+\projectHeader{Neural Network From Scratch}{Python, NumPy, Machine Learning Fundamentals}{https://github.com/Jishnu-Prasad888/Neural-Network-From-Scratch}
+\begin{itemize}
+  \resumeItem{Implemented dense layers, ReLU/Softmax activations, categorical cross-entropy loss, and backpropagation using only NumPy.}
+  \resumeItem{Built and analyzed SGD with momentum, AdaGrad, RMSProp, and learning rate decay; trained and evaluated on MNIST.}
+\end{itemize}
+
+% ── TECHNICAL SKILLS ─────────────────────────────────────────────────────────
+\section*{Technical Skills}
+
+\small
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+  \textbf{Languages}          & Python,JavaScript,TypeScript,C++ ,Go,Java, MATLAB, GraphQL, Bash,R \\[3pt]
+  \textbf{Frameworks \& Libs} & React, React Native, Next.js, Django, FastAPI, TensorFlow, PyTorch, OpenCV, ROS2, Ansible, LangChain, LangGraph \\[3pt]
+  \textbf{Tools \& Platforms} & Git, Tailwind CSS, Electron.js ,Docker, Kubernetes, Kafka, PostgreSQL, TimescaleDB, ChromaDB, Redis \\
+\end{tabularx}
+\normalsize
+
+% ── ACADEMICS ────────────────────────────────────────────────────────────────
+\section*{Academics}
+
+\noindent\textbf{\small B.Tech, NITK:}
+
+\vspace{4pt}
+\small
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{DBEAFE}
+  \textbf{Semester} & \textbf{SGPA (/10)} & \textbf{GPA (/4)} & \textbf{Percentage} \\
+  \hline
+  Semester 1 & 7.27 & 2.91 & 69.35\% \\
+  \hline
+  Semester 2 & 7.40 & 2.96 & 70.30\% \\
+  \hline
+  Semester 3 & 7.00 & 2.80 & 66.50\% \\
+  \hline
+\end{tabular}
+\normalsize
+
+\vspace{6pt}
+
+\vspace{6pt}
+
+\noindent\textbf{\small Relevant Coursework:} {\small Engineering Mathematics I \& II, Signals and Systems, Python Programming, Analysis of Electric Circuits, Electromagnetic Theory, Analog \& Digital Electronic Circuits, Electrical Measurements and Instrumentation}
+
+\vspace{6pt}
+
+{\color{gray!40}\hrule height 0.4pt}
+
+\vspace{6pt}
+
+\noindent\textbf{\small Pre-University College (KSEAB) / 12th:} {\small 96\%}
+
+\vspace{4pt}
+
+{\color{gray!40}\hrule height 0.4pt}
+
+\vspace{6pt}
+
+\noindent\textbf{\small 10th Boards (ICSE):} {\small 89\%}
+% ── LEADERSHIP ───────────────────────────────────────────────────────────────
+\section*{Leadership \& Activities}
+
+\noindent\textbf{Top 10 --- Caterpillar Autonomy Challenge (IIT Madras):}
+{\small\color{dark} Member of a top-10 team; designed and built an autonomous Mars-terrain rover capable of crater navigation and sand berm construction.}
+
+\vspace{0.4em}
+\noindent\textbf{IET NITK Student Chapter:}
+{\small\color{dark} Project Lead, Full-Stack, and Hardware Developer for \textit{RescueMind}—a multi-agent disaster response system. Built a custom graph-based routing engine to identify safest evacuation paths, integrated a CNN model to classify map regions by disaster severity, and developed a multimodal RAG agent to deliver real-time government advisories, news, and safety protocols through natural language interfaces.}
+
+\vspace{0.4em}
+\noindent\textbf{AAC \& SMILE Club, NITK:}
+{\small\color{dark} Co-led Arduino-based astronomy projects, including estimating stellar mass using light intensity variations, developing a multi-camera machine learning-based live video stitching system for astronomical observations, and building a Three.js application to identify optimal star patterns for rendering user-defined constellations based on real-time location and sky visibility. Organized technical events and sponsorships, and established sub-teams to streamline workflows and reduce member workload.}
+\end{document}

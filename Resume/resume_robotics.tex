@@ -1,0 +1,191 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\evensidemargin}{-0.45in}
+\addtolength{\textwidth}{0.90in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.05in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% tighter (but safe) lists
+\setlist[itemize]{noitemsep, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jishnu Prasad} \\ \vspace{1pt}
+    \small 9844778936 $|$ \href{mailto:thisisjishnuprasad888@gmail.com}{\underline{thisisjishnuprasad888@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/jishnu-prasad-ba90a9328/}{\underline{linkedin.com/in/jishnu-prasad-ba90a9328}} $|$ 
+    \href{https://jishnu-prasad.vercel.app/}{\underline{jishnu-prasad.vercel.app}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology Karnataka}{Surathkal, Mangalore}
+      {Bachelor of Technology in Electrical and Electronics Engineering (EEE)}{Sep. 2024 -- Present}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {HALE (Healthcare Analytics and Language Engineering) Lab}{NITK Surathkal}
+      {Intern $|$ \emph{Python, TensorFlow, Computer Vision, Vision Transformers, Multimodal AI, RAG}}
+      {Jan. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designing a multimodal data processing pipeline to ingest, preprocess, and analyze satellite and drone imagery for disaster zone assessment}
+        \resumeItem{Implementing a fusion framework using Small Language Models (SLMs) and Retrieval-Augmented Generation (RAG) to semantically align visual data with textual disaster reports and alerts}
+        \resumeItem{Developing a real-time, user-facing visualization prototype enabling natural-language querying and interpretation of fused disaster intelligence for decision support}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+  \resumeProjectHeading
+{\textbf{Top 11 — Caterpillar Autonomy Challenge : Autonomous Rover for Sand Berm Construction} \\
+\textbf{} \emph{ROS2, Python, LiDAR, YOLOv8, SLAM}}{}
+\vspace{2pt}
+  \resumeItemListStart
+    \resumeItem{Collaborated in a multidisciplinary team to design and deploy an autonomous rover capable of navigating unstructured outdoor terrain under competition constraints}
+    
+    \resumeItem{Developed a LiDAR-based obstacle detection pipeline using \texttt{/scan} data to identify boulders and generate real-time avoidance footprints, integrated with SLAM-based occupancy grid mapping}
+    
+    \resumeItem{Fine-tuned a YOLOv8n model for crater detection (\textasciitilde92\% mAP), enabling robust visual perception and triggering dynamic avoidance in unstructured environments}
+    
+    \resumeItem{Engineered a sensor-fusion and path-planning stack combining LiDAR, odometry, and occupancy grids for autonomous navigation in non-line-of-sight (NLOS) conditions on resource-constrained hardware (Raspberry Pi 5 + Hailo AI HAT)}
+  \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{LLM-Guided Autonomous Rover} $|$ \emph{ROS2, Raspberry Pi 5, ESP32, React Native, Gemini, YOLO}}{}
+  \resumeItemListStart
+    \resumeItem{Developed an autonomous rover using ROS2 and a Raspberry Pi 5, leveraging a webcam-based perception pipeline to capture images and offload decision-making to Gemini for navigation commands}
+    
+    \resumeItem{Implemented a cloud-inference loop where captured frames are processed by Gemini to generate real-time movement instructions (left/right/forward), enabling LLM-driven control without onboard heavy vision models}
+    
+    \resumeItem{Re-architected motor control by offloading actuation to an ESP32, establishing WiFi-based communication between a mobile interface and rover for low-latency command execution}
+    
+    \resumeItem{Built a React Native app to stream camera input, interface with Gemini APIs, and transmit navigation commands, with an optional local YOLO-based fallback for on-device obstacle avoidance}
+  \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{Multi-Camera Live Sky Stitching System} $|$ \emph{OpenCV, PyTorch, Homography, Raspberry Pi, ESP32}}{}
+  \resumeItemListStart
+    \resumeItem{Designed a low-cost multi-camera system to capture and stitch real-time night sky feeds into a wide-field panoramic view using four directional cameras}
+    
+    \resumeItem{Implemented real-time image stitching using OpenCV with homography-based alignment, preprocessing, and seamless panorama generation}
+    
+    \resumeItem{Developed a synchronized multi-sensor pipeline integrating webcams, MPU6050 IMU, ESP32, and Raspberry Pi for camera calibration and orientation-aware stitching}
+    
+    \resumeItem{Built a scalable prototype demonstrating real-time computer vision for amateur astronomy, enabling wide-field observation and extensible to collaborative sky monitoring systems}
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Javascript, TypeScript, Python, MATLAB, C++ } \\
+     \textbf{Frameworks \& Libraries \& Tools}{:TensorFlow,Pytorch, Simulink, OpenCV, ROS2 ,React ,TailwindCSS ,Django , Docker, React Native, Ansible, Kubernetes, Kafka}
+    }}
+ \end{itemize}
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Other Activities}
+\begin{itemize}[leftmargin=0.15in, label={}]
+
+\resumeItem{\textbf{AAC \& SMILE Club NITK}: Co-led technical Arduino-based astronomy projects, led events, publicity, and sponsorships, and founded several sub-teams to improve team efficiency}
+
+\resumeItem{\textbf{Schneider Electric Go Green 2025 (Team EcoLogic)}: Led a team to design a decentralized solar-powered hydrogen and biogas system for sustainable rural energy and waste management}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}

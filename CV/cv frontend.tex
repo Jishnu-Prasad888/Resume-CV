@@ -1,0 +1,215 @@
+\documentclass[10.5pt]{article}
+\usepackage[margin=0.7in, top=0.6in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{ulem}
+
+% Colors
+\definecolor{accent}{HTML}{1A56DB}
+\definecolor{dark}{HTML}{1E293B}
+\definecolor{mid}{HTML}{475569}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries\color{accent}}{}{0em}{}[{\color{accent}\titlerule[1.2pt]}]
+\titlespacing*{\section}{0pt}{0.7em}{0.35em}
+
+% List settings
+\setlist[itemize]{leftmargin=1.2em, noitemsep, topsep=0.15em, itemsep=0.1em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Hyperlink setup
+\hypersetup{
+  colorlinks=false,
+  urlbordercolor=accent,
+  linkbordercolor=accent,
+  pdfborderstyle={/S/U/W 1},
+  pdfnewwindow=true
+}
+
+% Helper: underlined href that opens in a new tab/window
+\newcommand{\ulink}[2]{\href{#1}{\uline{#2}}}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small\color{dark} #1}
+
+\newcommand{\entryHeader}[2]{%
+  \noindent\textbf{\color{dark}#1}\hfill{\small\itshape\color{mid}#2}%
+}
+
+\newcommand{\entryMeta}[1]{%
+  \par\vspace{1pt}{\small\itshape\color{mid}#1}\par\vspace{3pt}%
+}
+
+\newcommand{\projectHeader}[3]{%
+  % #1 = name, #2 = tech, #3 = url (empty if none)
+  \noindent\textbf{\color{dark}#1}%
+  \par\vspace{1pt}{\small\itshape\color{mid}#2}%
+  \ifx&#3&\else\par\vspace{2pt}{\small\ulink{#3}{\textcolor{accent}{\ttfamily #3}}}\fi%
+  \par\vspace{3pt}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+% ── HEADER ───────────────────────────────────────────────────────────────────
+\begin{center}
+{\LARGE\bfseries\color{dark} JISHNU PRASAD}\\[4pt]
+{\small\color{mid} Full-Stack Developer $\cdot$ React, TypeScript, Node.js, Django $\cdot$ Building scalable, user-focused applications}
+\end{center}
+
+\vspace{4pt}
+{\small\color{mid}
+  \faPhone\ +91 98447 78936 \quad\textcolor{mid}{·}\quad
+  \faEnvelope\ \ulink{mailto:thisisjishnuprasad888@gmail.com}{\textcolor{mid}{thisisjishnuprasad888@gmail.com}} \quad\textcolor{mid}{·}\quad
+  \faLinkedin\ \ulink{https://linkedin.com/in/jishnu-prasad-ba90a9328}{\textcolor{mid}{jishnu-prasad-ba90a9328}} \quad\textcolor{mid}{·}\quad
+  \faGlobe\ \ulink{https://jishnu-prasad.vercel.app}{\textcolor{mid}{jishnu-prasad.vercel.app}}
+}
+
+% ── EDUCATION ────────────────────────────────────────────────────────────────
+\section*{Education}
+
+\entryHeader{National Institute of Technology Karnataka (NITK Surathkal)}{Sep 2024 -- Present}
+\entryMeta{B.Tech in Electrical and Electronics Engineering \quad·\quad Current CGPA: \textbf{7.27\,/\,10}}
+
+% ── EXPERIENCE ───────────────────────────────────────────────────────────────
+\section*{Experience}
+
+\entryHeader{HALE (Healthcare Analytics and Language Engineering) -  In-Semester Intern}{Jan 2026 -- Present}
+\entryMeta{NITK Surathkal · Python, TensorFlow, PyTorch, Computer Vision, Vision Transformers, RAG, LangChain}
+\begin{itemize}
+  \resumeItem{Designing a multimodal pipeline to ingest, preprocess, and analyze satellite and drone imagery for disaster zone assessment.}
+  \resumeItem{Implementing a fusion framework using Small Language Models (SLMs) and RAG to semantically align visual data with textual disaster reports.}
+  \resumeItem{Developing a real-time visualization prototype for natural-language querying of fused disaster intelligence.}
+  \resumeItem{Building a Raspberry Pi 5 cluster for on-device (edge) inference of ML models.}
+\end{itemize}
+
+\vspace{0.4em}
+\entryHeader{Urban Records --- Freelance Full-Stack Engineer}{Sep 2025 -- Nov 2025}
+\entryMeta{Remote · Django REST Framework, Docker, React, Tailwind CSS}
+\begin{itemize}
+  \resumeItem{Developed responsive React-based interfaces and REST APIs for a full-stack government documentation platform.}
+  \resumeItem{Optimized tax, passport, visa, and document-processing workflows for improved usability and data flow.}
+  \resumeItem{Deployed and maintained a stable production system scaling to 500+ active users.}
+\end{itemize}
+
+\vspace{0.4em}
+\entryHeader{SENA NGO --- Backend Engineering Intern}{May 2025 -- Jul 2025}
+\entryMeta{Surathkal, India · Python, Django, SQL, Docker}
+\begin{itemize}
+  \resumeItem{Built the donations module and integrated the Cashfree Python SDK to enable streamlined online contributions.}
+  \resumeItem{Enhanced the user-management dashboard with improved filters and clearer access workflows.}
+  \resumeItem{Created form-based publishing tools for content writers, reducing engineering overhead.}
+\end{itemize}
+
+% ── PROJECTS ─────────────────────────────────────────────────────────────────
+
+\section*{Projects}
+
+\projectHeader{Shipyard --- Local-First Kanban Productivity Platform}{Electron, React, TypeScript, SQLite, Firebase, Tailwind CSS}{http://shipyard-landing-page-one.vercel.app/}
+\begin{itemize}
+  \resumeItem{Built a full-featured \textbf{desktop productivity application} using Electron and React with a local-first architecture.}
+  \resumeItem{Implemented \textbf{drag-and-drop Kanban workflows} using DnD Kit for managing tasks, boards, and project hierarchies.}
+  \resumeItem{Designed and developed a \textbf{rich Markdown editor} using TipTap with support for wikilinks, task lists, and code blocks.}
+  \resumeItem{Engineered \textbf{offline-first data persistence} using SQLite with optional cloud sync via Firebase Firestore and conflict resolution.}
+  \resumeItem{Built advanced features including \textbf{global search, calendar aggregation, and activity dashboards}.}
+\end{itemize}
+
+\vspace{0.3em}
+
+\projectHeader{CipherStream --- Secure WebRTC Communication System}{React (Vite), Node.js, WebRTC, WebSockets, AES-GCM, ECDH}{}
+\begin{itemize}
+  \resumeItem{Designed a \textbf{real-time peer-to-peer communication platform} using WebRTC with custom signaling via WebSockets.}
+  \resumeItem{Implemented \textbf{end-to-end encryption} using ECDH key exchange and AES-GCM for secure data transmission.}
+  \resumeItem{Built pipelines for \textbf{embedding and extracting encrypted payloads} within video streams using insertable streams.}
+  \resumeItem{Developed a modular full-stack architecture with a React frontend and Node.js backend for low-latency communication.}
+  \resumeItem{Added real-time metrics including \textbf{latency, FPS, and payload overhead monitoring}.}
+\end{itemize}
+
+\vspace{0.3em}
+
+\projectHeader{StellarInk --- Name-Based Star Constellation Generator}{Python, Flask, React, Three.js, React Three Fiber, Skyfield}{https://github.com/Jishnu-Prasad888/StellarInk}
+\begin{itemize}
+  \resumeItem{Built a \textbf{full-stack visualization platform} that generates personalized constellations from user input.}
+  \resumeItem{Processed astronomical datasets (Hipparcos catalog) and computed \textbf{coordinate transformations (RA/Dec → Alt/Az)}.}
+  \resumeItem{Designed a custom \textbf{KDTree-based mapping algorithm} to align letter strokes with nearest visible stars.}
+  \resumeItem{Developed an interactive \textbf{3D star visualization} using React Three Fiber and Three.js.}
+  \resumeItem{Integrated backend APIs with frontend for \textbf{real-time constellation rendering}.}
+\end{itemize}
+
+\vspace{0.3em}
+
+\projectHeader{Browser History RAG Agent}{React, TypeScript, FastAPI, ChromaDB}{https://github.com/Jishnu-Prasad888/Browser-RAG}
+\begin{itemize}
+  \resumeItem{Built a \textbf{full-stack conversational interface} to query browsing history using a RAG pipeline.}
+  \resumeItem{Designed a React frontend with \textbf{persistent chat UI and API integration}.}
+  \resumeItem{Integrated local LLM inference for \textbf{privacy-focused querying without cloud APIs}.}
+\end{itemize}
+
+\vspace{0.3em}
+
+\projectHeader{Ingenium --- Cross-Platform Markdown Notes App}{React Native, TypeScript, AsyncStorage}{}
+\begin{itemize}
+  \resumeItem{Developed a \textbf{cross-platform mobile notes application} with real-time Markdown preview.}
+  \resumeItem{Implemented \textbf{offline-first architecture} with auto-save and persistent local storage.}
+  \resumeItem{Built features including \textbf{hierarchical organization, full-text search, and theming}.}
+  \resumeItem{Designed a custom Markdown renderer with \textbf{interactive components and syntax highlighting}.}
+\end{itemize}
+
+\vspace{0.3em}
+
+
+% ── TECHNICAL SKILLS ─────────────────────────────────────────────────────────
+\section*{Technical Skills}
+
+\small
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+  \textbf{Languages}          & Python,JavaScript,TypeScript,C++ ,Go,Java, MATLAB, GraphQL, Bash,R \\[3pt]
+  \textbf{Frameworks \& Libs} & React, React Native, Next.js, NodeJS, Django, FastAPI, TensorFlow, PyTorch, OpenCV, ROS2, LangChain, LangGraph \\[3pt]
+  \textbf{Tools \& Platforms} & Git, Tailwind CSS, Electron.js ,Docker, Kubernetes, Kafka, PostgreSQL, TimescaleDB, ChromaDB, Redis \\
+\end{tabularx}
+\normalsize
+
+% ── ACADEMICS ────────────────────────────────────────────────────────────────
+\section*{Academics}
+
+\vspace{3pt}
+\small
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  \rowcolor[HTML]{DBEAFE}
+  \textbf{Semester} & \textbf{SGPA\,/\,10} & \textbf{GPA\,/\,4} & \textbf{Percentage} \\
+  \hline
+  Semester 1 & 7.27 & 2.91 & 69.35\% \\
+  \hline
+  Semester 2 & 7.40 & 2.96 & 70.3\%  \\
+  \hline
+  Semester 3 & 7.00 & 2.80 & 66.5\%  \\
+  \hline
+\end{tabular}
+\normalsize
+
+\vspace{0.5em}
+\noindent\textbf{\small Relevant Coursework:}\ {\small\color{mid}Engineering Mathematics I \& II, Signals and Systems, Python Programming, Analysis of Electric Circuits, Electromagnetic Theory, Analog \& Digital Electronic Circuits, Electrical Measurements and Instrumentation}
+
+% ── LEADERSHIP ───────────────────────────────────────────────────────────────
+\section*{Leadership \& Activities}
+
+\noindent\textbf{Top 10 --- Caterpillar Autonomy Challenge (IIT Madras):}
+{\small\color{dark} Member of a top-10 team; designed and built an autonomous Mars-terrain rover capable of crater navigation and sand berm construction.}
+
+\vspace{0.4em}
+\noindent\textbf{IET NITK Student Chapter:}
+{\small\color{dark} Project Lead for \textit{RescueMind}, a disaster response system. Built a graph-based routing engine for safe evacuation, integrated CNN-based severity classification, and developed a multimodal RAG agent for real-time advisories via natural language interfaces.}
+
+\vspace{0.4em}
+\noindent\textbf{AAC \& SMILE Club, NITK:}
+{\small\color{dark} Co-led Arduino-based astronomy projects, including stellar mass estimation via light intensity, ML-based multi-camera video stitching, and a Three.js app for real-time constellation mapping. Organized technical events, secured sponsorships, and streamlined workflows through structured sub-teams.}
+\end{document}
