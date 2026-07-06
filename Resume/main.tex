@@ -39,6 +39,10 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
+
+\setlength{\footskip}{4pt}
+\addtolength{\textheight}{0.3in}
+
 % CLEAN SECTION SPACING
 \titleformat{\section}{
   \scshape\raggedright\large
@@ -127,7 +131,7 @@
 \resumeItemListStart
 \resumeItem{Built a \textbf{multilingual (English \& Kannada) multimodal RAG system} for SBI banking forms and documentation, integrating \textbf{OCR and web scraping}, alongside a \textbf{multi-agent retrieval framework} that dynamically routed queries across PDF, Markdown, Excel, and HTML sources for accurate, context-aware question answering.}
 \resumeItem{Implemented a \textbf{Knowledge-Augmented Generation (KAG)} architecture to overcome limitations of traditional RAG on complex banking queries, enhancing context recall and faithfulness.}
-\resumeItem{\textbf{Fine-tuned a Qwen3-8B-Instruct model} on a custom evaluation dataset to act as an answer-quality critic, scoring responses on \textbf{Accuracy, Answer Relevancy, and Faithfulness} to enable a \textbf{DeepThink feedback loop}}
+\resumeItem{\textbf{Fine-tuned a Qwen3-27B-Instruct model} on a custom evaluation dataset to act as an answer-quality critic, scoring responses on \textbf{Accuracy, Answer Relevancy, and Faithfulness} to enable a \textbf{DeepThink feedback loop}}
 
 \resumeItemListEnd
 
@@ -169,30 +173,35 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
+\vspace{-3pt}
 \resumeProjectHeading
 {\textbf{Memora --- Redis compatible In-Memory Database} $|$ \emph{Go, Python, TCP, Concurrent Systems}}
 {}
 {https://github.com/Jishnu-Prasad888/Memora}
 
 \resumeItemListStart
-\resumeItem{Built a Redis-compatible in-memory key-value database in Go with RESP protocol support, concurrent TCP client handling, and goroutine-based request processing.}
-\resumeItem{Implemented custom hash-table storage, TTL expiration, background cleanup, and RDB-style snapshot persistence for durable in-memory data management.}
+
+\resumeItem{Built a Redis-compatible in-memory key-value database in Go with \textbf{RESP protocol} support, concurrent TCP client handling, custom \textbf{hash-table storage}, \textbf{TTL expiration}, and \textbf{RDB-style snapshot persistence}.}
 \resumeItem{Developed CLI and Python GUI clients for administration and monitoring, achieving \textbf{226K+ ops/sec} over \textbf{1M benchmarked operations} with \textbf{39µs P50} and \textbf{2.0ms P99} latency under concurrent workloads.}
 \resumeItemListEnd
 
 
-\vspace{-2pt}
+\vspace{-4pt}
 
-    \resumeProjectHeading
-      {\textbf{RescueMind} $|$ \emph{FastAPI, Go, gRPC, PyTorch, CNN, RAG, Redis, WebSockets}}{\ghlink{github.com/Jishnu-Prasad888/RescueMind}}
+\resumeProjectHeading
+{\textbf{ATLAS --- Distributed Monitoring and Observability Platform} $|$ \emph{ReactJS, Django, NATS JetStream, AI, Redis, Cloudflare}}
+{}
+{https://github.com/Jishnu-Prasad888/ATLAS}
+
 \resumeItemListStart
-\resumeItem{Generated disaster severity heatmaps from satellite imagery using CNN-based classification across five disaster categories.}
 
-\resumeItem{Engineered a distributed backend using FastAPI, Go, gRPC, Redis, and WebSockets to process live RSS feeds and AIS ship-tracking streams with end-to-end response latencies of \textbf{\raise.17ex\hbox{$\scriptstyle\sim$}50--200\,ms}.}
+\resumeItem{Built and deployed distributed control plane with centralized \textbf{ATLAS} services and lightweight \textbf{Beacon} agents for scalable fleet orchestration and remote operations.}
 
-\resumeItem{Designed low-latency event-driven system architecture supporting concurrent multimodal data ingestion, inference, and real-time dashboard updates.}
+\resumeItem{Engineered a high-throughput observability platform collecting \textbf{CPU, memory, disk, network, process, Docker, and Kubernetes telemetry}, storing historical metrics in \textbf{Aurora PostgreSQL} and \textbf{Redis}, enabling real-time aggregation, log indexing, and \textbf{WebSocket-based streaming dashboards}; built a fault-tolerant \textbf{NATS JetStream} communication layer with \textbf{durable consumers}, \textbf{message replay}, \textbf{offline buffering}, \textbf{dead-letter queues}, and \textbf{mTLS} authentication for resilient distributed systems.}
+
+\resumeItem{Developed a multi-tenant operations platform featuring \textbf{RBAC}, \textbf{immutable audit logging}, \textbf{fleet-wide diagnostics}, \textbf{process and container lifecycle management}, \textbf{AI-assisted log/telemetry analysis}, and containerized deployment via \textbf{Docker}, \textbf{Cloudflare Tunnel}, \textbf{Nginx}, and \textbf{Vercel}.}
+
 \resumeItemListEnd
-
 
   \resumeSubHeadingListEnd
 \vspace{-5pt}
@@ -201,18 +210,21 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, JavaScript/TypeScript C++, Go} \\[2pt]
+     \vspace{-1pt}
      \textbf{Frameworks \& Libraries}{: Django, FastAPI, React, Next.js, LangChain, PyTorch, OpenCV} \\[2pt]
-     \textbf{Tools \& Platforms}{: Linux, Docker, Kubernetes, PostgreSQL, Redis, Git, MCP(Model Context Protocol)} , Google Cloud(Vertex AI)
+     \vspace{-1pt}
+     \textbf{Tools \& Platforms}{: Linux, Docker, Kubernetes, PostgreSQL, Redis, Git, MCP}, RAG , AWS (basics)
     }}
  \end{itemize}
 
+
+\vspace{-5pt}
 %-----------LEADERSHIP & ACTIVITIES-----------
 \section{Leadership \& Activities}
 \resumeSubHeadingListStart
-
   \resumeLeadershipEntry
  {Top 10 / 1{,}922 Teams --- Caterpillar Autonomy Challenge, IIT Madras}{Team Member, NITK CATERBOTS}
-{Worked on ROS2 for a mars-terrain rover with YOLOv8n crater detection (\textbf{$\sim$92\% mAP}) and SLAM navigation}
+{}
 \vspace{-10pt}
      \textbf{Amateur Astronomy Club (AAC) --- Chief Technical Coordinator }
     
