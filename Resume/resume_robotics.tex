@@ -1,12 +1,12 @@
 %-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Resume in Latex (ROBOTICS / ML FOCUSED VERSION)
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
-\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\documentclass[letterpaper,9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -18,7 +18,12 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{microtype}
+\usepackage{etoolbox}
 \input{glyphtounicode}
+
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\urlstyle{same}
+\definecolor{darkblue}{RGB}{0,0,139}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -26,14 +31,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.45in}
-\addtolength{\evensidemargin}{-0.45in}
-\addtolength{\textwidth}{0.90in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.05in}
-
-\urlstyle{same}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.3in}
 
 \raggedbottom
 \raggedright
@@ -41,151 +43,191 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\setlength{\footskip}{4pt}
+\addtolength{\textheight}{0.3in}
 
-% tighter (but safe) lists
+% CLEAN SECTION SPACING
+\titleformat{\section}{
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
 \setlist[itemize]{noitemsep, topsep=2pt, parsep=0pt, partopsep=0pt}
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
+
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
+  \item\small{#1}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-4pt}
+% #1 = title/tech line, #2 = date/right-aligned tag (optional), #3 = link (optional)
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \small#1 & \small#2\ifblank{#3}{}{\ifblank{#2}{}{\ $|$\ }\href{#3}{\textcolor{darkblue}{\underline{GitHub}}}} \\
+  \end{tabular*}
+  \vspace{-2pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \vspace{1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-4pt}
+\newcommand{\resumeLeadershipEntry}[3]{%
+  \vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small\textit{#2}
+  \end{tabular*}\vspace{-1pt}
+  \begin{minipage}{0.97\textwidth}
+    \small #3
+  \end{minipage}\vspace{3pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{3pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
+
+\newcommand{\printlink}[2]{\href{#1}{\underline{#2}}}
+\newcommand{\ghlink}[1]{\href{https://#1}{\textcolor{darkblue}{\underline{\small #1}}}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Jishnu Prasad} \\ \vspace{1pt}
-    \small 9844778936 $|$ \href{mailto:thisisjishnuprasad888@gmail.com}{\underline{thisisjishnuprasad888@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/jishnu-prasad-ba90a9328/}{\underline{linkedin.com/in/jishnu-prasad-ba90a9328}} $|$ 
-    \href{https://jishnu-prasad.vercel.app/}{\underline{jishnu-prasad.vercel.app}}
+    \textbf{\Huge \scshape Jishnu Prasad} \\[-1pt]
+    \vspace{1pt}
+    \small
+    +91\,98447\,78936 \quad$|$\quad
+    \printlink{mailto:thisisjishnuprasad888@gmail.com}{thisisjishnuprasad888@gmail.com} \quad$|$\quad
+    \printlink{https://linkedin.com/in/jishnu-prasad-ba90a9328}{linkedin.com/in/jishnu-prasad-ba90a9328} \\[2pt]
+    \printlink{https://github.com/Jishnu-Prasad888}{github.com/Jishnu-Prasad888} \quad$|$\quad
+    \printlink{https://jishnu-prasad.vercel.app}{jishnu-prasad.vercel.app}
 \end{center}
+\vspace{-14pt}
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {National Institute of Technology Karnataka}{Surathkal, Mangalore}
-      {Bachelor of Technology in Electrical and Electronics Engineering (EEE)}{Sep. 2024 -- Present}
+      {National Institute of Technology Karnataka (NITK Surathkal)}{Surathkal, India}
+      {B.Tech in Electrical and Electronics Engineering \quad CGPA: \textbf{7.18\,/\,10}}{Sep.~2024 -- Present}
   \resumeSubHeadingListEnd
 
+\vspace{-1pt}
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {HALE (Healthcare Analytics and Language Engineering) Lab}{NITK Surathkal}
-      {Intern $|$ \emph{Python, TensorFlow, Computer Vision, Vision Transformers, Multimodal AI, RAG}}
-      {Jan. 2025 -- Present}
-      \resumeItemListStart
-        \resumeItem{Designing a multimodal data processing pipeline to ingest, preprocess, and analyze satellite and drone imagery for disaster zone assessment}
-        \resumeItem{Implementing a fusion framework using Small Language Models (SLMs) and Retrieval-Augmented Generation (RAG) to semantically align visual data with textual disaster reports and alerts}
-        \resumeItem{Developing a real-time, user-facing visualization prototype enabling natural-language querying and interpretation of fused disaster intelligence for decision support}
-      \resumeItemListEnd
+      {SPIRE (Signal Processing, Interpretation and REpresentation) Lab}{\textbf{Indian Institute of Science (IISc)}}
+      {\textbf{Research Intern} $|$ \emph{Multimodal Retrieval Systems \& LLM Evaluation}}{May 2026 -- Present}
+    \resumeItemListStart
+      \resumeItem{Built a \textbf{multilingual (English \& Kannada) multimodal RAG system} for banking forms and documentation, integrating \textbf{OCR and web scraping} with a \textbf{multi-agent retrieval framework} that dynamically routed queries across PDF, Markdown, Excel, and HTML sources.}
+      \resumeItem{Implemented a \textbf{Knowledge-Augmented Generation (KAG)} architecture to overcome the limitations of traditional RAG on complex queries, improving context recall and faithfulness.}
+      \resumeItem{\textbf{Fine-tuned a Qwen3-27B-Instruct model} as an answer-quality critic scoring \textbf{Accuracy, Answer Relevancy, and Faithfulness} to drive a \textbf{DeepThink feedback loop}.}
+    \resumeItemListEnd
+
+    \vspace{-1pt}
+
+    \resumeSubheading
+      {HALE (Healthcare Analytics and Language Engineering) Lab}{\textbf{IT Dept., NITK}}
+      {\textbf{Research Intern} $|$ \emph{ROS2, Kubernetes, Redis, RAG, Ansible, Raspberry Pi}}{Jan. 2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Designed a multimodal data pipeline fusing \textbf{satellite/drone imagery} with SLM-based \textbf{RAG} over textual disaster reports, and built a real-time natural-language query interface for disaster-intelligence decision support.}
+      \resumeItem{Engineered and operated a multi-node \textbf{Raspberry Pi k3s cluster} with \textbf{MetalLB and NGINX Ingress} for load-balanced, TLS-secured edge-inference deployment.}
+      \resumeItem{Built a full observability stack (\textbf{Prometheus, Grafana, Loki, Promtail}) and deployed \textbf{MinIO} object storage for distributed model/image serving across the cluster.}
+      \resumeItem{Automated reproducible provisioning of edge-inference workloads on Raspberry Pi 5 nodes using \textbf{Ansible}.}
+    \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+\vspace{-7pt}
 %-----------PROJECTS-----------
 \section{Projects}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-  \resumeProjectHeading
-{\textbf{Top 11 — Caterpillar Autonomy Challenge : Autonomous Rover for Sand Berm Construction} \\
-\textbf{} \emph{ROS2, Python, LiDAR, YOLOv8, SLAM}}{}
-\vspace{2pt}
-  \resumeItemListStart
-    \resumeItem{Collaborated in a multidisciplinary team to design and deploy an autonomous rover capable of navigating unstructured outdoor terrain under competition constraints}
-    
-    \resumeItem{Developed a LiDAR-based obstacle detection pipeline using \texttt{/scan} data to identify boulders and generate real-time avoidance footprints, integrated with SLAM-based occupancy grid mapping}
-    
-    \resumeItem{Fine-tuned a YOLOv8n model for crater detection (\textasciitilde92\% mAP), enabling robust visual perception and triggering dynamic avoidance in unstructured environments}
-    
-    \resumeItem{Engineered a sensor-fusion and path-planning stack combining LiDAR, odometry, and occupancy grids for autonomous navigation in non-line-of-sight (NLOS) conditions on resource-constrained hardware (Raspberry Pi 5 + Hailo AI HAT)}
-  \resumeItemListEnd
 \resumeProjectHeading
-  {\textbf{LLM-Guided Autonomous Rover} $|$ \emph{ROS2, Raspberry Pi 5, ESP32, React Native, Gemini, YOLO}}{}
-  \resumeItemListStart
-    \resumeItem{Developed an autonomous rover using ROS2 and a Raspberry Pi 5, leveraging a webcam-based perception pipeline to capture images and offload decision-making to Gemini for navigation commands}
-    
-    \resumeItem{Implemented a cloud-inference loop where captured frames are processed by Gemini to generate real-time movement instructions (left/right/forward), enabling LLM-driven control without onboard heavy vision models}
-    
-    \resumeItem{Re-architected motor control by offloading actuation to an ESP32, establishing WiFi-based communication between a mobile interface and rover for low-latency command execution}
-    
-    \resumeItem{Built a React Native app to stream camera input, interface with Gemini APIs, and transmit navigation commands, with an optional local YOLO-based fallback for on-device obstacle avoidance}
-  \resumeItemListEnd
-\resumeProjectHeading
-  {\textbf{Multi-Camera Live Sky Stitching System} $|$ \emph{OpenCV, PyTorch, Homography, Raspberry Pi, ESP32}}{}
-  \resumeItemListStart
-    \resumeItem{Designed a low-cost multi-camera system to capture and stitch real-time night sky feeds into a wide-field panoramic view using four directional cameras}
-    
-    \resumeItem{Implemented real-time image stitching using OpenCV with homography-based alignment, preprocessing, and seamless panorama generation}
-    
-    \resumeItem{Developed a synchronized multi-sensor pipeline integrating webcams, MPU6050 IMU, ESP32, and Raspberry Pi for camera calibration and orientation-aware stitching}
-    
-    \resumeItem{Built a scalable prototype demonstrating real-time computer vision for amateur astronomy, enabling wide-field observation and extensible to collaborative sky monitoring systems}
-  \resumeItemListEnd
-  \resumeSubHeadingListEnd
+  {\textbf{Caterpillar Autonomy Challenge --- Sand Berm Construction Rover} $|$ \emph{ROS2, Python, LiDAR, YOLOv8, SLAM}}
+  {}
+  {}
+\resumeItemListStart
+  \resumeItem{Ranked \textbf{Top 10 of 1{,}922 teams} (IIT Madras); collaborated in a multidisciplinary team to design and deploy an autonomous rover capable of navigating unstructured outdoor terrain under competition constraints.}
+  \resumeItem{Developed a LiDAR-based obstacle detection pipeline using \texttt{/scan} data to identify boulders and generate real-time avoidance footprints, integrated with SLAM-based occupancy grid mapping.}
+  \resumeItem{Fine-tuned a YOLOv8n model for crater detection (\textasciitilde92\% mAP), enabling robust visual perception and dynamic avoidance in unstructured environments.}
+  \resumeItem{Engineered a sensor-fusion and path-planning stack combining LiDAR, odometry, and occupancy grids for autonomous navigation in non-line-of-sight (NLOS) conditions on resource-constrained hardware (Raspberry Pi 5 + Hailo AI HAT).}
+\resumeItemListEnd
 
+\vspace{-3pt}
+
+\resumeProjectHeading
+  {\textbf{LLM-Guided Autonomous Rover} $|$ \emph{ROS2, Raspberry Pi 5, ESP32, React Native, Gemini, YOLO}}
+  {}
+  {}
+\resumeItemListStart
+  \resumeItem{Developed an autonomous rover using ROS2 and a Raspberry Pi 5, leveraging a webcam-based perception pipeline to capture images and offload decision-making to Gemini for navigation commands.}
+  \resumeItem{Implemented a cloud-inference loop where captured frames are processed by Gemini to generate real-time movement instructions, enabling LLM-driven control without onboard heavy vision models.}
+  \resumeItem{Re-architected motor control by offloading actuation to an ESP32, establishing WiFi-based communication between a mobile interface and rover for low-latency command execution.}
+  \resumeItem{Built a React Native app to stream camera input, interface with Gemini APIs, and transmit navigation commands, with an optional local YOLO-based fallback for on-device obstacle avoidance.}
+\resumeItemListEnd
+
+\vspace{-3pt}
+
+\resumeProjectHeading
+  {\textbf{Multi-Camera Live Sky Stitching System} $|$ \emph{OpenCV, PyTorch, Homography, Raspberry Pi, ESP32}}
+  {}
+  {}
+\resumeItemListStart
+  \resumeItem{Designed a low-cost multi-camera system to capture and stitch real-time night sky feeds into a wide-field panoramic view using four directional cameras.}
+  \resumeItem{Implemented real-time image stitching using OpenCV with homography-based alignment, preprocessing, and seamless panorama generation.}
+  \resumeItem{Developed a synchronized multi-sensor pipeline integrating webcams, MPU6050 IMU, ESP32, and Raspberry Pi for camera calibration and orientation-aware stitching.}
+\resumeItemListEnd
+
+\vspace{-3pt}
+
+\resumeProjectHeading
+  {\textbf{Other Systems Projects} $|$ \emph{Go, ReactJS, Django, NATS JetStream, Redis}}
+  {}
+  {}
+\resumeItemListStart
+  \resumeItem{\textbf{Memora} (\href{https://github.com/Jishnu-Prasad888/Memora}{\textcolor{darkblue}{\underline{GitHub}}}): Redis-compatible in-memory database in Go with RESP protocol support, TTL expiration, and snapshot persistence, sustaining \textbf{226K+ ops/sec} at \textbf{39\,$\mu$s P50} latency.}
+  \resumeItem{\textbf{ATLAS} (\href{https://github.com/Jishnu-Prasad888/ATLAS}{\textcolor{darkblue}{\underline{GitHub}}}): Fault-tolerant telemetry and log-aggregation platform with AI-assisted log analysis, real-time dashboards, and a NATS JetStream messaging layer supporting mTLS-secured fleet orchestration.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Javascript, TypeScript, Python, MATLAB, C++ } \\
-     \textbf{Frameworks \& Libraries \& Tools}{:TensorFlow,Pytorch, Simulink, OpenCV, ROS2 ,React ,TailwindCSS ,Django , Docker, React Native, Ansible, Kubernetes, Kafka}
+     \textbf{Languages}{: Python, C++, Go, JavaScript/TypeScript, MATLAB} \\[2pt]
+     \textbf{Robotics \& CV}{: ROS2, SLAM, LiDAR, YOLOv8, OpenCV, Simulink, Vision Transformers} \\[2pt]
+     \textbf{ML / AI}{: PyTorch, TensorFlow, LangChain, RAG, Multimodal AI, LLM Fine-Tuning} \\[2pt]
+     \textbf{Systems \& Tools}{: Docker, Kubernetes, Redis, PostgreSQL, Ansible, Git, AWS, MCP, Kafka}
     }}
  \end{itemize}
 
+\vspace{-5pt}
 %-----------LEADERSHIP & ACTIVITIES-----------
-\section{Leadership \& Other Activities}
-\begin{itemize}[leftmargin=0.15in, label={}]
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+  \resumeLeadershipEntry
+    {Amateur Astronomy Club (AAC) \& SMILE Club, NITK}{Chief Technical Coordinator}
+    {Co-led technical Arduino-based astronomy projects, led events, publicity, and sponsorships, and founded several sub-teams to improve team efficiency.}
+  \resumeLeadershipEntry
+    {Schneider Electric Go Green 2025 (Team EcoLogic)}{Team Lead}
+    {Led a team designing a decentralized solar-powered hydrogen and biogas system for sustainable rural energy and waste management.}
+\resumeSubHeadingListEnd
 
-\resumeItem{\textbf{AAC \& SMILE Club NITK}: Co-led technical Arduino-based astronomy projects, led events, publicity, and sponsorships, and founded several sub-teams to improve team efficiency}
-
-\resumeItem{\textbf{Schneider Electric Go Green 2025 (Team EcoLogic)}: Led a team to design a decentralized solar-powered hydrogen and biogas system for sustainable rural energy and waste management}
-\end{itemize}
-
-%-------------------------------------------
 \end{document}
