@@ -16,7 +16,7 @@ B.Tech in Electrical and Electronics Engineering, CGPA: **7.18/10**
 
 **SPIRE (Signal Processing, Interpretation and REpresentation) Lab** — *IISC*
 Research Intern | *RAG, Python, React, Agentic AI*
-*May 2026 – Present*
+*May 2026 – July 2026*
 
 - Built a **multilingual (English & Kannada) multimodal RAG system** for SBI banking forms and documentation, integrating **OCR**, automated web scraping, document ingestion, embedding generation, and **Elasticsearch-based indexing** to enable hybrid vector and keyword search with metadata filtering for accurate and contextually relevant retrieval across digital and scanned documents.
 - Architected a **multi-agent retrieval framework** with specialized agents for PDF, Markdown, Excel, and HTML documents, dynamically routing queries to the most relevant knowledge source for improved retrieval accuracy and contextual grounding.

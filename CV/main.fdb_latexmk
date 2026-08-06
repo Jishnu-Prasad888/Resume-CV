@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1783367780.12822 "/home/jishnu/Desktop/Resume-CV/CV/main.tex" "main.pdf" "main" 1783367780.58284 0
+["pdflatex"] 1784714734.67846 "/home/jishnu/Desktop/Resume-CV/CV/main.tex" "main.pdf" "main" 1784714735.12518 0
   "/etc/texmf/web2c/texmf.cnf" 1783367426.54291 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jishnu/Desktop/Resume-CV/CV/main.tex" 1783367779.94426 14551 106103f6f095607215141b0aacac61f9 ""
+  "/home/jishnu/Desktop/Resume-CV/CV/main.tex" 1784714734.49433 14553 9e0a6d0e8003196edff09747fad0068e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcbx1000.tfm" 1136768653 1536 30fde759286ded71559881bfa2623939 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -95,9 +95,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1783367441.49249 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1783367458 8214217 349bd054a90a5178167806201c4bc925 ""
-  "main.aux" 1783367780.54347 794 02c3280471690efb2b14aefdef0bfe80 "pdflatex"
-  "main.out" 1783367780.54347 557 d2ad4c4cdf931e3e8c3884c4fd2d4673 "pdflatex"
-  "main.tex" 1783367779.94426 14551 106103f6f095607215141b0aacac61f9 ""
+  "main.aux" 1784714735.09086 794 02c3280471690efb2b14aefdef0bfe80 "pdflatex"
+  "main.out" 1784714735.09086 557 d2ad4c4cdf931e3e8c3884c4fd2d4673 "pdflatex"
+  "main.tex" 1784714734.49433 14553 9e0a6d0e8003196edff09747fad0068e ""
   (generated)
   "main.aux"
   "main.log"
