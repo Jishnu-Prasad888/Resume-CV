@@ -1,0 +1,241 @@
+```latex
+%-------------------------
+% Resume in Latex (EMBEDDED SYSTEMS FOCUSED VERSION)
+%------------------------
+
+\documentclass[letterpaper,9pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{etoolbox}
+\input{glyphtounicode}
+
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\urlstyle{same}
+\definecolor{darkblue}{RGB}{0,0,139}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.9in}
+\addtolength{\textheight}{1.3in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\setlength{\footskip}{4pt}
+\addtolength{\textheight}{0.3in}
+
+\titleformat{\section}{
+  \scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlist[itemize]{noitemsep, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \small#1 & \small#2\ifblank{#3}{}{\ifblank{#2}{}{\ $|$\ }\href{#3}{\textcolor{darkblue}{\underline{GitHub}}}} \\
+  \end{tabular*}
+  \vspace{-2pt}
+}
+
+\newcommand{\resumeLeadershipEntry}[3]{%
+  \vspace{1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small\textit{#2}
+  \end{tabular*}\vspace{-1pt}
+  \begin{minipage}{0.97\textwidth}
+    \small #3
+  \end{minipage}\vspace{3pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{1pt}}
+
+\newcommand{\printlink}[2]{\href{#1}{\underline{#2}}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Jishnu Prasad} \\[-1pt]
+    \vspace{1pt}
+    \small
+    +91\,98447\,78936 \quad$|$\quad
+    \printlink{mailto:thisisjishnuprasad888@gmail.com}{thisisjishnuprasad888@gmail.com} \quad$|$\quad
+    \printlink{https://linkedin.com/in/jishnu-prasad-ba90a9328}{linkedin.com/in/jishnu-prasad-ba90a9328} \\[2pt]
+    \printlink{https://github.com/Jishnu-Prasad888}{github.com/Jishnu-Prasad888} \quad$|$\quad
+    \printlink{https://jishnu-prasad.vercel.app}{jishnu-prasad.vercel.app}
+\end{center}
+\vspace{-14pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {National Institute of Technology Karnataka (NITK Surathkal)}{Surathkal, India}
+    {B.Tech in Electrical and Electronics Engineering \quad CGPA: \textbf{7.18\,/\,10}}{Sep.~2024 -- Present}
+\resumeSubHeadingListEnd
+
+\vspace{-1pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {HALE (Healthcare Analytics and Language Engineering) Lab}{\textbf{IT Dept., NITK}}
+    {\textbf{Research Intern} $|$ \emph{Edge Computing, ROS2, Raspberry Pi, Ansible}}{Jan. 2025 -- Present}
+  \resumeItemListStart
+    \resumeItem{Engineered a multi-node \textbf{Raspberry Pi 5 edge-computing cluster} for deploying resource-constrained robotics and inference workloads across distributed ARM-based systems.}
+    \resumeItem{Developed robotics workloads using \textbf{ROS2}, integrating sensor data, perception pipelines, mapping, and navigation components for edge deployment.}
+    \resumeItem{Built and deployed real-time disaster-intelligence pipelines combining \textbf{satellite/drone imagery} with textual data for edge-assisted decision support.}
+    \resumeItem{Automated reproducible provisioning and deployment of edge workloads across Raspberry Pi nodes using \textbf{Ansible}, with MetalLB, NGINX Ingress, Prometheus, Grafana, Loki, and MinIO.}
+  \resumeItemListEnd
+
+  \vspace{-1pt}
+
+  \resumeSubheading
+    {SPIRE (Signal Processing, Interpretation and REpresentation) Lab}{\textbf{Indian Institute of Science (IISc)}}
+    {\textbf{Research Intern} $|$ \emph{Signal Processing, Multimodal Systems \& LLM Evaluation}}{May 2026 -- July 2026}
+  \resumeItemListStart
+    \resumeItem{Developed data-processing pipelines combining \textbf{OCR, document processing, web data acquisition, and multimodal retrieval} for English and Kannada banking documentation.}
+    \resumeItem{Worked on retrieval and evaluation pipelines for heterogeneous data sources including PDF, Markdown, Excel, and HTML documents.}
+    \resumeItem{Applied model evaluation and feedback techniques for measuring \textbf{accuracy, relevancy, and faithfulness} of generated responses.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-7pt}
+
+%-----------PROJECTS-----------
+\section{Embedded Systems \& Robotics Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{LLM-Guided Autonomous Rover} $|$ \emph{ESP32, Raspberry Pi 5, ROS2, YOLO, React Native}}
+    {}
+    {}
+  \resumeItemListStart
+    \resumeItem{Built an autonomous rover around a \textbf{Raspberry Pi 5}, using a webcam-based perception pipeline and ROS2 for robot control and communication.}
+    \resumeItem{Separated high-level computation from low-level actuation by \textbf{offloading motor control to an ESP32}, establishing WiFi communication between the embedded controller and the rover interface.}
+    \resumeItem{Implemented a perception-to-command pipeline in which camera frames were processed for navigation decisions and converted into movement commands for the embedded controller.}
+    \resumeItem{Developed a mobile control interface for camera streaming and rover command transmission, with an optional local YOLO-based obstacle-detection path.}
+  \resumeItemListEnd
+
+  \vspace{-3pt}
+
+  \resumeProjectHeading
+    {\textbf{Caterpillar Autonomy Challenge --- Sand Berm Construction Rover} $|$ \emph{C++, ROS2, LiDAR, SLAM, Raspberry Pi 5}}
+    {}
+    {}
+  \resumeItemListStart
+    \resumeItem{Ranked \textbf{Top 10 of 1,922 teams} at the IIT Madras challenge while developing an autonomous rover for unstructured outdoor terrain.}
+    \resumeItem{Developed a real-time \textbf{LiDAR processing pipeline} using \texttt{/scan} data for obstacle detection and avoidance, integrated with SLAM-based occupancy-grid mapping.}
+    \resumeItem{Implemented sensor-fusion and navigation using \textbf{LiDAR, odometry, and occupancy grids} on resource-constrained Raspberry Pi 5 + Hailo AI HAT hardware.}
+    \resumeItem{Fine-tuned a YOLOv8n model for crater detection, achieving approximately \textbf{92\% mAP} for visual perception and obstacle avoidance.}
+  \resumeItemListEnd
+
+  \vspace{-3pt}
+
+  \resumeProjectHeading
+    {\textbf{Multi-Camera Live Sky Stitching System} $|$ \emph{ESP32, Raspberry Pi, MPU6050, OpenCV, PyTorch}}
+    {}
+    {}
+  \resumeItemListStart
+    \resumeItem{Designed a low-cost multi-camera embedded sensing system using \textbf{Raspberry Pi, ESP32, webcams, and an MPU6050 IMU} for orientation-aware image acquisition.}
+    \resumeItem{Developed a synchronized multi-sensor pipeline for camera calibration, orientation estimation, and real-time data processing.}
+    \resumeItem{Implemented homography-based image alignment and real-time panorama generation using OpenCV.}
+  \resumeItemListEnd
+
+  \vspace{-3pt}
+
+  \resumeProjectHeading
+    {\textbf{Embedded \& Systems Projects} $|$ \emph{C++, Go, Redis, NATS, Linux}}
+    {}
+    {}
+  \resumeItemListStart
+    \resumeItem{\textbf{Memora}: Implemented a Redis-compatible in-memory database in Go with RESP protocol support, TTL expiration, and snapshot persistence, achieving \textbf{226K+ ops/sec} at \textbf{39\,$\mu$s P50} latency.}
+    \resumeItem{\textbf{ATLAS}: Built a fault-tolerant telemetry and log-aggregation platform with real-time dashboards and a NATS JetStream messaging layer for distributed fleet communication.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Programming}{: C++, Python, Go, JavaScript/TypeScript, MATLAB} \\[2pt]
+    \textbf{Embedded \& Hardware}{: ESP32, Raspberry Pi, MPU6050, Hailo AI HAT, Arduino, Sensor Integration, WiFi Communication} \\[2pt]
+    \textbf{Embedded Concepts}{: Sensor Fusion, Real-Time Data Processing, Edge Computing, Hardware/Software Integration, Control Systems, Signal Processing} \\[2pt]
+    \textbf{Robotics}{: ROS2, SLAM, LiDAR, Odometry, Occupancy Grids, YOLOv8, OpenCV} \\[2pt]
+    \textbf{Tools \& Systems}{: Linux, Git, Docker, Kubernetes, Ansible, Redis, NATS, Prometheus, Grafana} \\[2pt]
+    \textbf{Engineering}{: Simulink, MATLAB, Multimodal Signal/Data Processing}
+  }}
+\end{itemize}
+
+\vspace{-5pt}
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+
+  \resumeLeadershipEntry
+    {Amateur Astronomy Club (AAC) \& SMILE Club, NITK}{Chief Technical Coordinator}
+    {Co-led technical Arduino-based astronomy projects, led technical events, and founded sub-teams to improve project execution and team coordination.}
+
+  \resumeLeadershipEntry
+    {Schneider Electric Go Green 2025 (Team EcoLogic)}{Team Lead}
+    {Led a team designing a decentralized solar-powered hydrogen and biogas system for sustainable rural energy and waste management.}
+
+\resumeSubHeadingListEnd
+
+\end{document}
+```
